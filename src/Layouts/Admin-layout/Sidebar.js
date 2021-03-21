@@ -1,58 +1,59 @@
-import React, { useState } from "react";
+import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Sidebar = () => {
   return (
     <>
       <div class="sidebar" data-color="white" data-active-color="danger">
         <div class="logo">
-          <a href="#" class="simple-text logo-normal">
+          <NavLink class="simple-text logo-normal" to="/">
             MahFa
-          </a>
+          </NavLink>
         </div>
         <div class="sidebar-wrapper">
           <ul class="nav">
             <li class="active ">
-              <a href="./dashboard.html">
+              <NavLink to="/Login">
                 <i class="nc-icon nc-bank"></i>
                 <p>Dashboard</p>
-              </a>
+              </NavLink>
             </li>
-            <li>
-              <a href="./icons.html">
+            {/* <li>
+              <NavLink href="./icons.html">
                 <i class="nc-icon nc-diamond"></i>
                 <p>Icons</p>
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="./map.html">
+              <NavLink href="./map.html">
                 <i class="nc-icon nc-pin-3"></i>
                 <p>Maps</p>
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="./notifications.html">
+              <NavLink href="./notifications.html">
                 <i class="nc-icon nc-bell-55"></i>
                 <p>Notifications</p>
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="./user.html">
+              <NavLink href="./user.html">
                 <i class="nc-icon nc-single-02"></i>
                 <p>User Profile</p>
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="./tables.html">
+              <NavLink href="./tables.html">
                 <i class="nc-icon nc-tile-56"></i>
                 <p>Table List</p>
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="./typography.html">
+              <NavLink href="./typography.html">
                 <i class="nc-icon nc-caps-small"></i>
                 <p>Typography</p>
-              </a>
-            </li>
+              </NavLink>
+            </li> */}
           </ul>
         </div>
       </div>
