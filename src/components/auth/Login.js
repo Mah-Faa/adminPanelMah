@@ -45,6 +45,13 @@ const Login = () => {
                           values.email == "mahdiyeh.fani@gmail.com" ||
                           values.password == "123456"
                         ) {
+                          const user = {
+                            userId: "25",
+                            userName: "mahdiyeh",
+                            token: "jdiwuebapwpindlasowieyfbsalkpwoejukl45j-s",
+                          };
+                          //set local storage
+                          localStorage.setItem("user", JSON.stringify(user));
                           history.push("/");
                         } else {
                           alert(values.email);
