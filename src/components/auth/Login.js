@@ -1,10 +1,11 @@
 import React from "react";
 import "../auth/Login.css";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-
+import { useHistory } from "react-router-dom";
 import loginImg from "../../assets/imgs/Login-pana2.png";
 
 const Login = () => {
+  const history = useHistory();
   return (
     <>
       <div className="container login__container my-5">
@@ -20,7 +21,7 @@ const Login = () => {
           <div className="col-md-5 d-flex">
             <div className="align-self-center card login__card shadow-sm w-100">
               <div className="card-body">
-                <form action="">
+                <div>
                   <h2 className="text-muted text-center">Login Page</h2>
 
                   <div className="">
@@ -40,10 +41,16 @@ const Login = () => {
                         return errors;
                       }}
                       onSubmit={(values, { setSubmitting }) => {
-                        setTimeout(() => {
-                          alert(JSON.stringify(values, null, 2));
-                          setSubmitting(false);
-                        }, 400);
+                        if (
+                          values.email == "mahdiyeh.fani@gmail.com" ||
+                          values.password == "123456"
+                        ) {
+                          history.push("/");
+                        } else {
+                          alert(values.email);
+                        }
+
+                        setSubmitting(false);
                       }}
                     >
                       {({ isSubmitting }) => (
@@ -82,28 +89,29 @@ const Login = () => {
                               Remember me
                             </label>
                           </div>
+
+                          <div className="form-group">
+                            <button
+                              type="submit"
+                              className="btn btn-primary btn-lg btn-block my-3"
+                              disabled={isSubmitting}
+                            >
+                              Login
+                            </button>
+                          </div>
                         </Form>
                       )}
                     </Formik>
 
-                    <div className="form-group">
-                      <a
-                        href="#"
-                        className="btn btn-primary btn-lg btn-block my-3"
-                      >
-                        Login
-                      </a>
-
-                      <div className="d-flex justify-content-between">
-                        <a href="#!">Password forgotten?</a>
-                        <span>
-                          <a href="#">Create account</a>
-                        </span>
-                      </div>
-                      <div className="dropdown-divider my-4"></div>
+                    <div className="d-flex justify-content-between">
+                      <a href="#!">Password forgotten?</a>
+                      <span>
+                        <a href="#">Create account</a>
+                      </span>
                     </div>
+                    <div className="dropdown-divider my-4"></div>
                   </div>
-                </form>
+                </div>
               </div>
             </div>
           </div>
