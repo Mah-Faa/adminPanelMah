@@ -1,6 +1,8 @@
 import React from "react";
 import "../auth/Login.css";
-import loginImg from "../../assets/imgs/Login-pana.png";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+
+import loginImg from "../../assets/imgs/Login-pana2.png";
 
 const Login = () => {
   return (
@@ -21,38 +23,69 @@ const Login = () => {
                 <form action="">
                   <h2 className="text-muted text-center">Login Page</h2>
 
-                  <div className="my-5">
-                    <h5 className="text-center">Login</h5>
-                  </div>
-
                   <div className="">
-                    <div className="form-group">
-                      <label for="">Username</label>
-                      <input
-                        type="text"
-                        className="form-control form-control-lg"
-                      />
-                    </div>
-                    <div className="form-group">
-                      <label for="">Password</label>
-                      <input
-                        type="password"
-                        className="form-control form-control-lg"
-                      />
-                    </div>
-                    <div className="custom-control custom-checkbox">
-                      <input
-                        type="checkbox"
-                        className="custom-control-input custom-control"
-                        id="customCheckDisabled1"
-                      />
-                      <label
-                        className="custom-control-label"
-                        for="customCheckDisabled1"
-                      >
-                        Remember me
-                      </label>
-                    </div>
+                    <Formik
+                      initialValues={{ email: "", password: "" }}
+                      validate={(values) => {
+                        const errors = {};
+                        if (!values.email) {
+                          errors.email = "Required";
+                        } else if (
+                          !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(
+                            values.email
+                          )
+                        ) {
+                          errors.email = "Invalid email address";
+                        }
+                        return errors;
+                      }}
+                      onSubmit={(values, { setSubmitting }) => {
+                        setTimeout(() => {
+                          alert(JSON.stringify(values, null, 2));
+                          setSubmitting(false);
+                        }, 400);
+                      }}
+                    >
+                      {({ isSubmitting }) => (
+                        <Form>
+                          <div className="form-group">
+                            <label for="email">Email</label>
+                            <Field
+                              type="email"
+                              name="email"
+                              className="form-control form-control-lg"
+                            />
+                            <ErrorMessage name="email" component="div" />
+                          </div>
+
+                          <div className="form-group">
+                            <label for="password">Password</label>
+                            <Field
+                              type="password"
+                              name="password"
+                              className="form-control form-control-lg"
+                            />
+                            <ErrorMessage name="password" component="div" />
+                          </div>
+
+                          <div className="custom-control custom-checkbox">
+                            <Field
+                              type="checkbox"
+                              name="checkbox"
+                              className="custom-control-input custom-control"
+                              id="customCheckDisabled1"
+                            />
+                            <label
+                              className="custom-control-label"
+                              for="customCheckDisabled1"
+                            >
+                              Remember me
+                            </label>
+                          </div>
+                        </Form>
+                      )}
+                    </Formik>
+
                     <div className="form-group">
                       <a
                         href="#"
