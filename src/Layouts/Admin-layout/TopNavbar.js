@@ -1,6 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
+import { useLocation } from "react-router";
 
 const TopNavbar = () => {
+  const location = useLocation();
+
+  const logout = () => {
+    localStorage.clear();
+    window.location.reload();
+  };
   return (
     <>
       <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
@@ -88,7 +95,11 @@ const TopNavbar = () => {
                 </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link btn-rotate" title="logout">
+                <a
+                  class="nav-link btn-rotate"
+                  title="logout"
+                  onClick={() => logout()}
+                >
                   <i class="nc-icon nc-lock-circle-open"></i>
                   <p>
                     <span class="d-lg-none d-md-block">Account</span>
