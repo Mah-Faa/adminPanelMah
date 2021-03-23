@@ -13,7 +13,7 @@ const Sidebar = () => {
         <div class="sidebar-wrapper">
           <ul class="nav">
             <li class="active ">
-              <NavLink to="/Login">
+              <NavLink to="/">
                 <i class="nc-icon nc-bank"></i>
                 <p>Dashboard</p>
               </NavLink>
