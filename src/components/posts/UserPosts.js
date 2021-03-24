@@ -65,7 +65,9 @@ const UserPosts = () => {
             </div>
           </div>
           <div className="row">
-            <PostDetails />
+            {posts.map((post) => (
+              <PostDetails post={post} />
+            ))}
           </div>
         </div>
       </div>
