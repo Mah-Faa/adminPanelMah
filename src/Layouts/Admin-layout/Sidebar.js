@@ -18,38 +18,39 @@ const Sidebar = () => {
                 <p>Dashboard</p>
               </NavLink>
             </li>
-            {/* <li>
-              <NavLink href="./icons.html">
-                <i class="nc-icon nc-diamond"></i>
-                <p>Icons</p>
+            <li>
+              <NavLink to="/userPost">
+                <i class="nc-icon nc-paper"></i>
+                <p>Users Posts</p>
               </NavLink>
             </li>
+            {/* 
             <li>
-              <NavLink href="./map.html">
+              <NavLink>
                 <i class="nc-icon nc-pin-3"></i>
                 <p>Maps</p>
               </NavLink>
             </li>
             <li>
-              <NavLink href="./notifications.html">
+              <NavLink>
                 <i class="nc-icon nc-bell-55"></i>
                 <p>Notifications</p>
               </NavLink>
             </li>
             <li>
-              <NavLink href="./user.html">
+              <NavLink>
                 <i class="nc-icon nc-single-02"></i>
                 <p>User Profile</p>
               </NavLink>
             </li>
             <li>
-              <NavLink href="./tables.html">
+              <NavLink>
                 <i class="nc-icon nc-tile-56"></i>
                 <p>Table List</p>
               </NavLink>
             </li>
             <li>
-              <NavLink href="./typography.html">
+              <NavLink>
                 <i class="nc-icon nc-caps-small"></i>
                 <p>Typography</p>
               </NavLink>

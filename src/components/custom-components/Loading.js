@@ -3,7 +3,7 @@ import React from "react";
 const Loading = () => {
   return (
     <div>
-      <button class="btn btn-warning" type="button" disabled>
+      <button class="btn btn-outline-dark" type="button" disabled>
         <span
           class="spinner-border spinner-border-sm"
           role="status"
