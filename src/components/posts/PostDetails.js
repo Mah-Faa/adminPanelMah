@@ -3,25 +3,23 @@ import "../posts/PostDtails.css";
 
 const PostDetails = ({ post }) => {
   return (
-    <div>
-      <div class="py-5">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-4 mx-auto">
-              <div class="text-center pb-5">
-                <h6 class="h6">{post.title}</h6>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-md-4 mx-auto">
-              <blockquote class="blockquote blockquote-custom bg-white p-5 shadow rounded">
-                <div class="blockquote-custom-icon bg-info shadow-sm">
-                  <i class="fa fa-quote-left text-white"></i>
+    <>
+      <div className="py-5">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12 ">
+              <blockquote className="blockquote blockquote-custom p-5 shadow rounded ">
+                <div className="blockquote-custom-icon bg-info shadow-sm">
+                  <i className="fa fa-quote-left text-white"></i>
                 </div>
-
-                <p class="mb-0 mt-2 font-italic">
+                <div class="blockquote-header pb-2 border-bottom">
+                  <b>Title:</b>
+                  <cite title="Source Title">
+                    {" "}
+                    <b>{post.title}</b>
+                  </cite>
+                </div>
+                <p className="mb-0 mt-2 font-italic">
                   "{post.body}
                   ."
                 </p>
@@ -30,7 +28,7 @@ const PostDetails = ({ post }) => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
