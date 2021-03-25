@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import PostDetails from "./PostDetails";
+import Loading from "../../components/custom-components/Loading";
 
 const UserPosts = () => {
   const [users, setUsers] = useState([]);
@@ -65,9 +66,11 @@ const UserPosts = () => {
             </div>
           </div>
           <div className="row">
-            {posts.map((post) => (
-              <PostDetails post={post} />
-            ))}
+            {loading ? (
+              <Loading />
+            ) : (
+              posts.map((post) => <PostDetails post={post} />)
+            )}
           </div>
         </div>
       </div>
