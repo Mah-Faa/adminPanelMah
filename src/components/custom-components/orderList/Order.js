@@ -1,11 +1,22 @@
 import React, { useState, useEffect } from "react";
 import OrderList from "./OrderList";
 import data from "../../globalData/InitialData";
+import swal from "sweetalert";
 
 const Order = () => {
   const [items, setItems] = useState(data);
   const removeItem = (id) => {
-    setItems([...items.filter((q) => q.id !== id)]);
+    swal({
+      title: "Are you sure?",
+      text: "Are you sure that you want to delete this item?",
+      icon: "warning",
+      dangerMode: true,
+      buttons: ["Cancel", "Delete"],
+    }).then((willDelete) => {
+      if (willDelete) {
+        setItems([...items.filter((q) => q.id !== id)]);
+      }
+    });
   };
   return (
     <div>
