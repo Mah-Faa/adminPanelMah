@@ -24,37 +24,37 @@ const Sidebar = () => {
                 <p>Users Posts</p>
               </NavLink>
             </li>
-            {/* 
+
             <li>
-              <NavLink>
+              <NavLink to="/">
                 <i class="nc-icon nc-pin-3"></i>
                 <p>Maps</p>
               </NavLink>
             </li>
             <li>
-              <NavLink>
+              <NavLink to="/">
                 <i class="nc-icon nc-bell-55"></i>
                 <p>Notifications</p>
               </NavLink>
             </li>
             <li>
-              <NavLink>
+              <NavLink to="/">
                 <i class="nc-icon nc-single-02"></i>
                 <p>User Profile</p>
               </NavLink>
             </li>
             <li>
-              <NavLink>
+              <NavLink to="/">
                 <i class="nc-icon nc-tile-56"></i>
                 <p>Table List</p>
               </NavLink>
             </li>
             <li>
-              <NavLink>
+              <NavLink to="/">
                 <i class="nc-icon nc-caps-small"></i>
                 <p>Typography</p>
               </NavLink>
-            </li> */}
+            </li>
           </ul>
         </div>
       </div>
