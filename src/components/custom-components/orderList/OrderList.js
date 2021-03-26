@@ -18,12 +18,18 @@ const OrderList = ({ data }) => {
           </thead>
 
           <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Lorem ipsum dolor</td>
-              <td>Lorem ipsum dolor</td>
-              <td>Lorem ipsum dolor</td>
-            </tr>
+            {data.map((item) => (
+              <tr key={item.id}>
+                <th scope="row">{item.id}</th>
+                <td>{item.image}</td>
+                <td>{item.color}</td>
+                <td>{item.name}</td>
+                <td>{item.id}</td>
+                <td>
+                  <button className="btn btn-md btn-danger">Delet</button>
+                </td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
