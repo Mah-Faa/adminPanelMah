@@ -26,9 +26,9 @@ const Sidebar = () => {
             </li>
 
             <li>
-              <NavLink to="/">
+              <NavLink to="/order">
                 <i class="nc-icon nc-pin-3"></i>
-                <p>Maps</p>
+                <p>Order List</p>
               </NavLink>
             </li>
             <li>

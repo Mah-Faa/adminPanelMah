@@ -6,6 +6,7 @@ const ShopList = [
     image:
       "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883334/person-1_rfzshl.jpg",
     size: "medium",
+    price: "220$",
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ const ShopList = [
     image:
       "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883334/person-1_rfzshl.jpg",
     size: "medium",
+    price: "420$",
   },
   {
     id: 3,
@@ -22,6 +24,7 @@ const ShopList = [
     image:
       "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883334/person-1_rfzshl.jpg",
     size: "medium",
+    price: "120$",
   },
   {
     id: 4,
@@ -30,14 +33,16 @@ const ShopList = [
     image:
       "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883334/person-1_rfzshl.jpg",
     size: "freesize",
+    price: "852$",
   },
   {
-    id: 1,
+    id: 5,
     name: "Fitbit Alta HR",
     color: "black",
     image:
       "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883334/person-1_rfzshl.jpg",
     size: "medium",
+    price: "852$",
   },
 ];
 
