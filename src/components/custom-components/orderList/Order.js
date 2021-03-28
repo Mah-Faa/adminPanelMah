@@ -5,6 +5,7 @@ import swal from "sweetalert";
 
 const Order = () => {
   const [items, setItems] = useState(data);
+
   const removeItem = (id) => {
     swal({
       title: "Are you sure?",
@@ -18,12 +19,30 @@ const Order = () => {
       }
     });
   };
+  const handleIncrement = (index) => {
+    const temp = [...items];
+    // const findIndex = temp.findIndex((q) => q.index == index);
+    temp[index].total++;
+    setItems(temp);
+  };
+  const handleDecrement = (index) => {
+    const temp = [...items];
+    if (temp[index].total > 0) {
+      temp[index].total--;
+      setItems(temp);
+    }
+  };
   return (
     <div>
       <div class="card orderCard">
         <div class="card-body">
           <h5 class="card-title">Order List</h5>
-          <OrderList data={items} remove={removeItem} />
+          <OrderList
+            data={items}
+            remove={removeItem}
+            increment={handleIncrement}
+            decrement={handleDecrement}
+          />
         </div>
       </div>
     </div>

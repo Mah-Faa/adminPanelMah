@@ -7,6 +7,7 @@ const ShopList = [
       "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883334/person-1_rfzshl.jpg",
     size: "medium",
     price: "220$",
+    total: 0,
   },
   {
     id: 2,
@@ -16,6 +17,7 @@ const ShopList = [
       "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883334/person-1_rfzshl.jpg",
     size: "medium",
     price: "420$",
+    total: 0,
   },
   {
     id: 3,
@@ -25,6 +27,7 @@ const ShopList = [
       "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883334/person-1_rfzshl.jpg",
     size: "medium",
     price: "120$",
+    total: 0,
   },
   {
     id: 4,
@@ -34,6 +37,7 @@ const ShopList = [
       "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883334/person-1_rfzshl.jpg",
     size: "freesize",
     price: "852$",
+    total: 0,
   },
   {
     id: 5,
@@ -43,6 +47,7 @@ const ShopList = [
       "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883334/person-1_rfzshl.jpg",
     size: "medium",
     price: "852$",
+    total: 0,
   },
 ];
 
