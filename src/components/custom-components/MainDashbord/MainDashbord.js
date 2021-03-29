@@ -1,15 +1,12 @@
 import React, { useState } from "react";
 import CardsDashbords from "./CardsDashbords";
+import BarChart from "./charts/barChart";
 const MainDashbord = () => {
   const [cards, setCards] = useState([]);
 
   return (
     <div>
-      <div className="row">
-        <div classname="col">
-          <CardsDashbords />
-        </div>
-      </div>
+      <BarChart />
     </div>
   );
 };
