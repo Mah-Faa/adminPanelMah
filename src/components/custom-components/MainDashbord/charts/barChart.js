@@ -41,35 +41,39 @@ const BarChart = () => {
       });
   };
   return (
-    <div>
-      <h1>chart</h1>
-      <div>
-        <Line
-          data={chartData}
-          options={{
-            responsive: true,
-            title: {
-              display: true,
-              text: "Data Orgranized In Bars",
-              fontSize: 25,
-            },
-
-            scales: {
-              yAxes: [
-                {
-                  ticks: {
-                    beginAtZero: true,
-                    maxTicksLimit: 10,
-                  },
-                  gridLines: { display: false },
+    <>
+      <div className="card">
+        <div className="card-body">
+          <h1>chart</h1>
+          <div>
+            <Line
+              data={chartData}
+              options={{
+                responsive: true,
+                title: {
+                  display: true,
+                  text: "Data Orgranized In Bars",
+                  fontSize: 25,
                 },
-              ],
-              xAxes: [{ gridLines: { display: false } }],
-            },
-          }}
-        />
+
+                scales: {
+                  yAxes: [
+                    {
+                      ticks: {
+                        beginAtZero: true,
+                        maxTicksLimit: 10,
+                      },
+                      gridLines: { display: false },
+                    },
+                  ],
+                  xAxes: [{ gridLines: { display: false } }],
+                },
+              }}
+            />
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
