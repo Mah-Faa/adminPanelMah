@@ -31,7 +31,7 @@ const Sidebar = () => {
                 <p>Order List</p>
               </NavLink>
             </li>
-            <li>
+            {/* <li>
               <NavLink to="/">
                 <i class="nc-icon nc-bell-55"></i>
                 <p>Notifications</p>
@@ -54,7 +54,7 @@ const Sidebar = () => {
                 <i class="nc-icon nc-caps-small"></i>
                 <p>Typography</p>
               </NavLink>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

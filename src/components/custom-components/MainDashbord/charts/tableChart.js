@@ -1,16 +1,38 @@
 import React, { useState } from "react";
-const TableChart = () => {
+
+const TableChart = ({ salery }) => {
   return (
     <div>
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-        </div>
+      <div class="table-responsive text-nowrap">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Surname</th>
+              <th>Country</th>
+              <th>City</th>
+              <th>Position</th>
+              <th>Age</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Kate</td>
+              <td>Moss</td>
+              <td>USA / The United Kingdom / China / Russia </td>
+              <td>
+                New York City / Warsaw / Lodz / Amsterdam / London / Chicago
+              </td>
+              <td>
+                Web Designer /UX designer / Ul designer / JavaScript Developer
+              </td>
+              <td>23</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   );
