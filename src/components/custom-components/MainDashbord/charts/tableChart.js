@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const TableChart = ({ salery }) => {
+const TableChart = ({ salerys }) => {
   return (
     <div>
       <div class="table-responsive text-nowrap">
@@ -9,28 +9,21 @@ const TableChart = ({ salery }) => {
             <tr>
               <th>#</th>
               <th>Name</th>
-              <th>Surname</th>
-              <th>Country</th>
-              <th>City</th>
-              <th>Position</th>
+
+              <th>salery</th>
               <th>Age</th>
             </tr>
           </thead>
 
           <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Kate</td>
-              <td>Moss</td>
-              <td>USA / The United Kingdom / China / Russia </td>
-              <td>
-                New York City / Warsaw / Lodz / Amsterdam / London / Chicago
-              </td>
-              <td>
-                Web Designer /UX designer / Ul designer / JavaScript Developer
-              </td>
-              <td>23</td>
-            </tr>
+            {salerys.map((salery) => (
+              <tr key={salery.id}>
+                <td>{salery.id} </td>
+                <td>{salery.employee_name} </td>
+                <td>{salery.employee_salary}</td>
+                <td>{salery.employee_age}</td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>

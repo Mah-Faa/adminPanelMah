@@ -44,7 +44,7 @@ const BarChart = () => {
     <>
       <div className="card">
         <div className="card-body">
-          <h1>chart</h1>
+          <h3> Salery Chart</h3>
           <div>
             <Line
               data={chartData}

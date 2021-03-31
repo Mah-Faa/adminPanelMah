@@ -15,7 +15,6 @@ const PostDetails = ({ post }) => {
                 <div class="blockquote-header pb-2 border-bottom">
                   <b>Title:</b>
                   <cite title="Source Title">
-                    {" "}
                     <b>{post.title}</b>
                   </cite>
                 </div>
