@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import ReactPaginate from "react-paginate";
 
 const TableChart = ({ salerys }) => {
+  const [pageNumber, setNumber] = useState(0);
   return (
     <div>
       <div class="table-responsive text-nowrap">
@@ -9,7 +11,6 @@ const TableChart = ({ salerys }) => {
             <tr>
               <th>#</th>
               <th>Name</th>
-
               <th>salery</th>
               <th>Age</th>
             </tr>
