@@ -9,12 +9,12 @@ const OrderList = ({ data, remove, increment, decrement }) => {
           <thead>
             <tr>
               <th>#</th>
-              <th className="th-lg">Product</th>
-              <th className="th-lg">Names</th>
-              <th className="th-lg">Details</th>
+              <th className="th-lg">Product Image</th>
+              <th className="th-lg">Names of Foods</th>
+              <th csslaName="th-lg">Size</th>
+              <th className="th-lg">No.Of Product</th>
               <th className="th-lg">price</th>
-              {/* <th className="th-lg">No.Of Product</th> */}
-              <th csslaName="th-lg">Total</th>
+
               <th className="th-lg">Action</th>
             </tr>
           </thead>
@@ -27,8 +27,8 @@ const OrderList = ({ data, remove, increment, decrement }) => {
                   <img className="person-img" src={item.image} />
                 </td>
                 <td>{item.name}</td>
-                <td>{item.color}</td>
-                <td>{item.price}</td>
+                <td>{item.size}</td>
+
                 <td>
                   <button
                     className="btn btn-sm btn-danger mr-1"
@@ -45,6 +45,7 @@ const OrderList = ({ data, remove, increment, decrement }) => {
                     +
                   </button>
                 </td>
+                <td>{item.price}</td>
                 <td>
                   <button
                     className="btn btn-md btn-danger"
