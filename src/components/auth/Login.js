@@ -2,7 +2,7 @@ import React from "react";
 import "../auth/Login.css";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { useHistory } from "react-router-dom";
-import loginImg from "../../assets/imgs/Login-pana2.png";
+import loginImg from "../../assets/imgs/Login-pana.png";
 
 const Login = () => {
   const history = useHistory();

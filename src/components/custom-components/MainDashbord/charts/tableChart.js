@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import ReactPaginate from "react-paginate";
 
-const TableChart = ({ salerys }) => {
-  const [pageNumber, setNumber] = useState(0);
+const TableChart = ({ salerys, page }) => {
   return (
     <div>
-      <div class="table-responsive text-nowrap">
-        <table class="table table-striped">
+      <div className="table-responsive text-nowrap">
+        <table className="table table-striped">
           <thead>
             <tr>
               <th>#</th>

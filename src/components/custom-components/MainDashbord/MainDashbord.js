@@ -8,12 +8,14 @@ const MainDashbord = () => {
   return (
     <div>
       <div className="row">
-        <div className="col-md-6">
+        <div className="col-md-12">
           {/* <TableChart /> */}
-          <SaleryList />
-        </div>
-        <div className="col-md-6">
           <BarChart />
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-md-12">
+          <SaleryList />
         </div>
       </div>
     </div>

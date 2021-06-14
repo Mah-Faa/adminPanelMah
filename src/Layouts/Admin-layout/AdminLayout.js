@@ -11,15 +11,15 @@ import TopNavbar from "./TopNavbar";
 const AdminLayout = () => {
   return (
     <>
-      <div class="wrapper">
+      <div className="wrapper">
         <Sidebar />
-        <div class="main-panel">
+        <div className="main-panel">
           <TopNavbar />
           <div className="content">
             <Switch>
               <Route path="/" exact component={MainDashbord} />
-              <Route path="/userPost" component={UserPosts} />
-              <Route path="/order" component={Order} />
+              <Route path="/userPost" exact component={UserPosts} />
+              <Route path="/order" exact component={Order} />
             </Switch>
           </div>
         </div>
